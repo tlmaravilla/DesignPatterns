@@ -7,14 +7,14 @@ namespace Memento.Exercise
 {
     public class DocumentHistory
     {
-        private readonly List<DocumentState> _docStates = new List<DocumentState>();
+        private readonly List<DocumentMemento> _docStates = new List<DocumentMemento>();
 
-        public void Push(DocumentState state)
+        public void Push(DocumentMemento memento)
         {
-            _docStates.Add(state);
+            _docStates.Add(memento);
         }
 
-        public DocumentState Pop()
+        public DocumentMemento Pop()
         {
             return _docStates.Last();
         }

@@ -10,16 +10,16 @@ namespace Memento.Exercise
         public string FontName { get; set; }
         public int FontSize { get; set; }
 
-        public DocumentState CreateState(Document doc)
+        public DocumentMemento CreateState(Document doc)
         {
-            return new DocumentState(doc);
+            return new DocumentMemento(doc.Content, doc.FontName, doc.FontSize);
         }
 
-        public void RestoreState(DocumentState state)
+        public void RestoreState(DocumentMemento memento)
         {
-            Content = state.Document.Content;
-            FontName = state.Document.FontName;
-            FontSize = state.Document.FontSize;
+            Content = memento.Content;
+            FontName = memento.FontName;
+            FontSize = memento.FontSize;
         }
 
         public override string ToString()
