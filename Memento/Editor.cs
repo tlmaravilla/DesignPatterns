@@ -2,21 +2,16 @@
 {
     public class Editor
     {
-        private string _content;
+        public string Content { get; set; }
 
         public EditorState CreateState()
         {
-            return new EditorState(_content);
+            return new EditorState(Content);
         }
 
         public void RestoreState(EditorState state)
         {
-            _content = state.Content;
-        }
-
-        public string GetContent()
-        {
-            return _content;
+            Content = state.Content;
         }
     }
 }

@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Memento.Example
+namespace Memento
 {
-    public class History
+    public class EditorHistory
     {
-        private List<EditorState> _editorStates = new List<EditorState>();
+        private readonly List<EditorState> _editorStates = new List<EditorState>();
 
         public void Push(EditorState state)
         {

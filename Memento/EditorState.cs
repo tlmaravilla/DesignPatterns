@@ -1,4 +1,4 @@
-﻿namespace Memento.Example
+﻿namespace Memento
 {
     public class EditorState
     {
